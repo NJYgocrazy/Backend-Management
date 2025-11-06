@@ -1,5 +1,10 @@
-# Vue 3 + TypeScript + Vite
+# vue3+vite+vue-router+pinia+element-plus+echarts+mockjs+localstorage+axios
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+1. 借助 element-plus + vue-router 负责整个系统 UI 结构实现单页面应用
+2. 针对左侧菜单权限问题，为了实现不同角色登录左侧菜单展示不同，采用了动态路由的实现
+3. 针对首页 echarts 表格的展示，缩小页面会导致表格展示不全的问题做了适配的处理
+4. 用到了面包屑缓存提升了用户的体验，主要解决用户在操作的时候不小心关闭浏览器，重新打开可以快速定位到上次浏览的页面
+5. 针对左侧路由和面包屑以及 tab 栏进行了联动处理
+6. 针对用户可能在 url 上输入非法地址做了 404 的路由处理
+7. 整个系统数据交互在前期植入了 mock 模拟数据，没有阻塞接口地址的调用，大大提升了后期联调的效率
+8. 针对 axios 进行二次封装，集中处理请求前和请求后的操作，其中还用到了 mock 开关和三种环境的配置，可以通过配置迅速打开和关闭 mock，系统可以自动根据当前环境调取不同的接口地址
